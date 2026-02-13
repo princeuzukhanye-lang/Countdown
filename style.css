@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+  color: red;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px red;
+}
+
+#timer {
+  font-size: 48px;
+  font-weight: bold;
+  background: red;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px pink;
+}
+
+/* Floating hearts */
+.hearts::before,
+.hearts::after {
+  content: "❤";
+  position: absolute;
+  font-size: 30px;
+  color: red;
+  animation: float 6s infinite;
+}
+
+.hearts::after {
+  left: 70%;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0% { top: 100%; opacity: 0; }
+  50% { opacity: 1; }
+  100% { top: -10%; opacity: 0; }
+}
